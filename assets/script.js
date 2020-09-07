@@ -1,15 +1,15 @@
 //  Get quote from API
 async function getQuote() {
 
-  const proxyURL = 'https://pacific-thicket-16003.herokuapp.com/';
-  const apiURL = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=eng&format=json';
-  
+  const proxyUrl = 'https://arcane-mesa-70168.herokuapp.com/';
+  const apiUrl = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=eng&format=json';
+
   try {
-    const response = await fetch(proxyURL + apiURL);
+    const response = await fetch(proxyUrl + apiUrl);
     const data = await response.json();
     console.log(data);
-    
-  } catch (error){
+
+  } catch (error) {
     getQuote();
     console.log('Whoops, no quote!!!', error);
   }
@@ -18,4 +18,4 @@ async function getQuote() {
 
 
 //  On load
-getQuote();
+//getQuote();
